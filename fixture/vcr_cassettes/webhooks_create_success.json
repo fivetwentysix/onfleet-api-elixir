@@ -1,22 +1,23 @@
 [
   {
     "request": {
-      "body": "",
+      "body": "{\"trigger\":4,\"url\":\"https://oh-dev1.cloud.test.com/api/webhooks/1/endpoint\"}",
       "headers": {
-        "Authorization": "Basic foobar"
+        "Authorization": "Basic foobar",
+        "Content-Type": "application/json"
       },
-      "method": "get",
+      "method": "post",
       "options": [],
       "request_body": "",
       "url": "https://onfleet.com/api/v2/webhooks"
     },
     "response": {
       "binary": false,
-      "body": "[{\"id\":\"abc\",\"name\":\"EventMonitor - Failed\",\"count\":288,\"url\":\"https://oh-dev1.cloud.test.com/api/webhooks/1/endpoint\",\"trigger\":4,\"isEnabled\":false},{\"id\":\"qjDG7Kq6IX9hHS88aM*NTsl0\",\"name\":\"EventMonitor - Task Started\",\"count\":2825,\"url\":\"https://oh-dev1.cloud.test.com/api/webhooks/3/endpoint\",\"trigger\":0,\"isEnabled\":false},{\"id\":\"mHUI6Q8rjWAMI2n6~cB3jdEb\",\"name\":\"EventMonitor ETA\",\"count\":2578,\"url\":\"https://oh-dev1.cloud.test.com/api/webhooks/4/endpoint\",\"trigger\":1,\"isEnabled\":false,\"threshold\":3600}]",
+      "body": "{\"id\":\"TglLVIgT2fX3TpoZWzohO0vN\",\"count\":0,\"url\":\"https://oh-dev1.cloud.test.com/api/webhooks/1/endpoint\",\"trigger\":4,\"isEnabled\":true}",
       "headers": {
-        "Date": "Sat, 08 Feb 2020 14:57:30 GMT",
+        "Date": "Sat, 08 Feb 2020 15:27:06 GMT",
         "Content-Type": "application/json",
-        "Content-Length": "552",
+        "Content-Length": "142",
         "Connection": "keep-alive",
         "Server": "nginx/1.6.0",
         "X-RateLimit-Limit": "20",

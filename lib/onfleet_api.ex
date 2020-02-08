@@ -21,7 +21,7 @@ defmodule OnfleetApi do
   end
 
   def headers do
-    [Authorization: "Basic #{credentials()}"]
+    [Authorization: "Basic #{credentials()}", "Content-Type": "application/json"]
   end
 
   defp credentials do

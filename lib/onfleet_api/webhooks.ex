@@ -21,4 +21,42 @@ defmodule OnfleetApi.Webhooks do
 
     {resp[:status_code], resp[:body]}
   end
+
+  @doc """
+  Create webhook
+
+  ## Examples
+
+      iex> OnfleetApi.Webhooks.create(%{
+        "trigger" => 4,
+        "url" => "https://oh-dev1.cloud.test.com/api/webhooks/1/endpoint"
+      })
+      {200, "response body"}
+
+  """
+  def create(data) do
+    json = Jason.encode!(data)
+    resp =
+      HTTPoison.post!("https://onfleet.com/api/v2/webhooks", json, headers())
+      |> Map.to_list()
+
+    {resp[:status_code], resp[:body]}
+  end
+
+  @doc """
+  Delete webhook
+
+  ## Examples
+
+      iex> OnfleetApi.Webhooks.delete(123)
+      {200, "response body"}
+
+  """
+  def delete(webhook_id) do
+    resp =
+      HTTPoison.delete!("https://onfleet.com/api/v2/webhooks/#{webhook_id}", headers())
+      |> Map.to_list()
+
+    {resp[:status_code], resp[:body]}
+  end
 end

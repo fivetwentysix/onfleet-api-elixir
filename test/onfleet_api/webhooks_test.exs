@@ -12,4 +12,22 @@ defmodule OnfleetApi.WebhooksTest do
       assert code == 200
     end
   end
+
+  test "OnfleetApi.create/1" do
+    use_cassette "webhooks_create_success" do
+      {code, _} = OnfleetApi.Webhooks.create(%{
+        "trigger" => 4,
+        "url" => "https://oh-dev1.cloud.test.com/api/webhooks/1/endpoint"
+      })
+      assert code == 200
+    end
+  end
+
+
+  test "OnfleetApi.delete/1" do
+    use_cassette "webhooks_delete_success" do
+      {code, _} = OnfleetApi.Webhooks.delete("123")
+      assert code == 200
+    end
+  end
 end
