@@ -1,4 +1,17 @@
 defmodule OnfleetApi do
+  @moduledoc """
+  Documentation for OnfleetApi.
+  """
+
+  @doc """
+  Hit test endpoint to verify your api key.
+
+  ## Examples
+
+      iex> OnfleetApi.test()
+      {200, "response body"}
+
+  """
   def test do
     resp = HTTPoison.get!("https://onfleet.com/api/v2/auth/test", headers())
     |> Map.to_list
