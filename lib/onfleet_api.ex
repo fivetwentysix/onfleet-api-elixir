@@ -1,18 +1,4 @@
 defmodule OnfleetApi do
-  require IEx
-  @moduledoc """
-  Documentation for OnfleetApi.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> OnfleetApi.hello()
-      :world
-
-  """
   def test do
     resp = HTTPoison.get!("https://onfleet.com/api/v2/auth/test", headers())
     |> Map.to_list
