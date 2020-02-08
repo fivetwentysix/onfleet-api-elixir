@@ -13,13 +13,15 @@ defmodule OnfleetApi do
 
   """
   def test do
-    resp = HTTPoison.get!("https://onfleet.com/api/v2/auth/test", headers())
-    |> Map.to_list
+    resp =
+      HTTPoison.get!("https://onfleet.com/api/v2/auth/test", headers())
+      |> Map.to_list()
+
     {resp[:status_code], resp[:body]}
   end
 
   def headers do
-    ["Authorization": "Basic #{credentials()}"]
+    [Authorization: "Basic #{credentials()}"]
   end
 
   defp credentials do

@@ -3,7 +3,7 @@ defmodule OnfleetApi.WebhooksTest do
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
 
   setup_all do
-    HTTPoison.start
+    HTTPoison.start()
   end
 
   test "OnfleetApi.test/0 can succeed" do

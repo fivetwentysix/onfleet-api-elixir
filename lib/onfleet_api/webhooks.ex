@@ -1,5 +1,6 @@
 defmodule OnfleetApi.Webhooks do
   import OnfleetApi
+
   @moduledoc """
   Documentation for OnfleetApi.
   """
@@ -14,8 +15,10 @@ defmodule OnfleetApi.Webhooks do
 
   """
   def list() do
-    resp = HTTPoison.get!("https://onfleet.com/api/v2/webhooks", headers())
-    |> Map.to_list
+    resp =
+      HTTPoison.get!("https://onfleet.com/api/v2/webhooks", headers())
+      |> Map.to_list()
+
     {resp[:status_code], resp[:body]}
   end
 end
