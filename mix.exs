@@ -6,6 +6,7 @@ defmodule OnfleetApi.MixProject do
       app: :onfleet_api,
       version: "0.1.0",
       elixir: "~> 1.9",
+      description: "onfleet api wrapper for elixir",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package()
