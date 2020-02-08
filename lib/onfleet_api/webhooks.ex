@@ -36,6 +36,7 @@ defmodule OnfleetApi.Webhooks do
   """
   def create(data) do
     json = Jason.encode!(data)
+
     resp =
       HTTPoison.post!("https://onfleet.com/api/v2/webhooks", json, headers())
       |> Map.to_list()
