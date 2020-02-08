@@ -26,7 +26,8 @@ defmodule OnfleetApi.MixProject do
       {:httpoison, "~> 1.6"},
       {:hackney, "~> 1.15.2"},
       {:jason, ">= 1.0.0"},
-      {:exvcr, "~> 0.10", only: :test}
+      {:exvcr, "~> 0.10", only: :test},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
