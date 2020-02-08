@@ -18,7 +18,7 @@ defmodule OnfleetApi do
     {resp[:status_code], resp[:body]}
   end
 
-  defp headers do
+  def headers do
     ["Authorization": "Basic #{credentials()}"]
   end
 
