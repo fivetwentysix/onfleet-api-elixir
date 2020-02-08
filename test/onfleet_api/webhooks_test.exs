@@ -6,7 +6,7 @@ defmodule OnfleetApi.WebhooksTest do
     HTTPoison.start()
   end
 
-  test "OnfleetApi.test/0 can succeed" do
+  test "OnfleetApi.list/0 can succeed" do
     use_cassette "webhooks_list_success" do
       {code, _} = OnfleetApi.Webhooks.list()
       assert code == 200
